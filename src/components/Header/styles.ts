@@ -22,10 +22,11 @@ export const Brand = styled.div`
   font-weight: 300;
 `;
 
-export const Menu = styled.ul`
-  display: flex;
-  list-style-type: none;
-  font-size: 16px;
-  gap: 16px;
-  color: #f4faff;
+export const Menu = styled.div`
+  button {
+    all: unset;
+    color: #f4faff;
+    font-size: 16px;
+    cursor: pointer;
+  }
 `;

@@ -1,12 +1,16 @@
 import * as Styles from "./styles";
 
-export const Header = () => {
+type Props = {
+  handleShowCart: () => void;
+};
+
+export const Header = ({ handleShowCart }: Props) => {
   return (
     <Styles.Header>
       <Styles.Container>
         <Styles.Brand>CART</Styles.Brand>
         <Styles.Menu>
-          <li>Cart</li>
+          <button onClick={handleShowCart}>Cart</button>
         </Styles.Menu>
       </Styles.Container>
     </Styles.Header>

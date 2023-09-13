@@ -8,19 +8,21 @@ type Props = {
 };
 
 export const ProductItem = ({ product }: Props) => {
+  const { name, imageURL, price } = product;
+
   return (
     <Styles.Product>
       <Styles.Cover>
-        <Styles.Image src={product.imageURL} alt={product.name} />
+        <Styles.Image src={imageURL} alt={name} />
+
         <Styles.AddButton>
           <MdAddShoppingCart size={32} />
         </Styles.AddButton>
       </Styles.Cover>
+
       <Styles.Details>
-        <Styles.Name>{product.name}</Styles.Name>
-        <Styles.Price>
-          {currencyFormatter("US", "USD", product.price)}
-        </Styles.Price>
+        <Styles.Name>{name}</Styles.Name>
+        <Styles.Price>{currencyFormatter("US", "USD", price)}</Styles.Price>
       </Styles.Details>
     </Styles.Product>
   );
