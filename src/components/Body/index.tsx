@@ -1,4 +1,5 @@
-import { Product } from "../Product";
+import { products } from "../../data/products";
+import { ProductItem } from "../ProductItem";
 import * as Styles from "./styles";
 
 export const Body = () => {
@@ -6,18 +7,9 @@ export const Body = () => {
     <Styles.Body>
       <Styles.Container>
         <Styles.Products>
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          {products.map((product) => (
+            <ProductItem product={product} key={product.id} />
+          ))}
         </Styles.Products>
       </Styles.Container>
     </Styles.Body>

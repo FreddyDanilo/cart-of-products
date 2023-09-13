@@ -4,10 +4,11 @@ export const Header = styled.div`
   background-color: #141e2a;
   position: sticky;
   top: 0;
+  z-index: 1;
 `;
 
 export const Container = styled.div`
-  /* width: min(100%, 1280px); */
+  width: min(100%, 1920px);
   margin: 0 auto;
   padding: 16px 32px;
   display: flex;
