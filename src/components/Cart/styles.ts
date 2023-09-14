@@ -16,4 +16,20 @@ export const Cart = styled.div`
   height: 100%;
   background-color: rgb(250, 250, 250);
   box-shadow: 5px 0 15px rgb(0, 0, 0, 0.1);
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  flex-direction: column;
+  overflow-y: scroll;
+  justify-content: flex-start;
+`;
+
+export const CloseCart = styled.div`
+  position: absolute;
+  right: 32px;
+  top: 16px;
+  font-size: 32px;
+  color: #f4faff;
+  font-weight: 300;
+  cursor: pointer;
 `;

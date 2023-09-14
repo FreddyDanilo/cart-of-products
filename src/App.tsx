@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export const App = () => {
   const [showCart, setShowCart] = useState<boolean>(false);
+
   const handleShowCart = () => {
     setShowCart((prev) => !prev);
   };
@@ -13,7 +14,7 @@ export const App = () => {
   return (
     <Styles.App>
       <Header handleShowCart={handleShowCart} />
-      {showCart && <Cart />}
+      {showCart && <Cart handleShowCart={handleShowCart} />}
       <Body />
     </Styles.App>
   );
