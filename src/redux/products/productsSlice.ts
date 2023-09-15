@@ -30,11 +30,13 @@ const productsSlice = createSlice({
     },
 
     descreaseProduct: (state, action: PayloadAction<string>) => {
-      state.products = state.products.map((product) =>
-        product.id === action.payload
-          ? { ...product, quantity: product.quantity - 1 }
-          : product
-      );
+      state.products = state.products
+        .map((product) =>
+          product.id === action.payload
+            ? { ...product, quantity: product.quantity - 1 }
+            : product
+        )
+        .filter(({ quantity }) => quantity > 0);
     },
 
     increaseProduct: (state, action: PayloadAction<string>) => {

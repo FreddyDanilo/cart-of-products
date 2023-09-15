@@ -68,6 +68,8 @@ export const Button = styled.button`
 `;
 
 export const Quantity = styled.span`
+  width: 24px;
+  text-align: center;
   font-size: 22px;
   font-weight: 700;
   color: rgb(20, 20, 20);

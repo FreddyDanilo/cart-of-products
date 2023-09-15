@@ -1,3 +1,4 @@
+import { selectProductsCount } from "../../redux/products/products.selector";
 import * as Styles from "./styles";
 
 type Props = {
@@ -10,7 +11,9 @@ export const Header = ({ handleShowCart }: Props) => {
       <Styles.Container>
         <Styles.Brand>CART</Styles.Brand>
         <Styles.Menu>
-          <button onClick={handleShowCart}>Cart</button>
+          <button onClick={handleShowCart}>
+            Cart ({selectProductsCount()})
+          </button>
         </Styles.Menu>
       </Styles.Container>
     </Styles.Header>
